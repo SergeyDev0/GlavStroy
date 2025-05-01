@@ -839,9 +839,11 @@
       }
 
       @media (max-width: 768px) {
-        .header-container {
-          flex-direction: column;
-          text-align: center;
+				body {
+					padding-top: 0;
+				}
+        header {
+					display: none;
         }
 
         .logo {
@@ -879,6 +881,11 @@
           grid-template-columns: repeat(2, 1fr);
           grid-template-rows: repeat(3, 200px);
         }
+
+				.gallery-item:first-child {
+					grid-column: 1;
+					grid-row: 1;
+      	}
       }
 
       @media (max-width: 576px) {
@@ -907,6 +914,12 @@
           grid-template-rows: repeat(4, 250px);
         }
       }
+
+			@media (max-width: 370px) {
+				.hero h1 {
+					font-size: 28px;
+				}
+			}
     </style>
   </head>
   <body>
@@ -959,8 +972,7 @@
         <div class="about-content">
           <div class="about-text">
             <h2>
-              ООО "Главстройнедвижимость" - лидер в проектировании жилых
-              комплексов
+              Мы - лидер в проектировании жилых комплексов
             </h2>
             <p>
               Наша компания уже более 15 лет успешно разрабатывает проекты жилых
@@ -1087,24 +1099,20 @@
         <div class="projects-filter">
           <button class="filter-btn active" data-filter="all">Все</button>
           <button class="filter-btn" data-filter="residential">Жилые</button>
-          <button class="filter-btn" data-filter="commercial">
-            Коммерческие
-          </button>
           <button class="filter-btn" data-filter="public">Общественные</button>
         </div>
         <div class="projects-grid">
           <div class="project-card" data-category="residential">
             <div class="project-img">
               <img
-                src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                alt="Жилой комплекс 'Зеленый берег'"
+                src="./1b280e97d16e16e1a6ac846612a5b6a8.jpg"
+                alt="2016 год. ЖК «Европейский»"
               />
             </div>
             <div class="project-overlay">
-              <h3>Жилой комплекс "Зеленый берег"</h3>
+              <h3>2016 год. ЖК «Европейский»</h3>
               <p>
-                Ставрополь, ул. Ленина, 45. Комплекс из 5 многоэтажных домов с
-                развитой инфраструктурой.
+                В юго-западном районе города Ставрополя
               </p>
               <a href="#contact" class="btn">Подробнее</a>
             </div>
@@ -1112,31 +1120,14 @@
           <div class="project-card" data-category="residential">
             <div class="project-img">
               <img
-                src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                alt="Коттеджный поселок 'Сосновый бор'"
+                src="./1db68f361e44b5f87892f59099b09903.jpg"
+                alt="2008 год. Жилой дом"
               />
             </div>
             <div class="project-overlay">
-              <h3>Коттеджный поселок "Сосновый бор"</h3>
+              <h3>2008 год. Жилой дом</h3>
               <p>
-                г. Пятигорск. 50 коттеджей класса "премиум" на участках от 15
-                соток.
-              </p>
-              <a href="#contact" class="btn">Подробнее</a>
-            </div>
-          </div>
-          <div class="project-card" data-category="commercial">
-            <div class="project-img">
-              <img
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                alt="Бизнес-центр 'Плаза'"
-              />
-            </div>
-            <div class="project-overlay">
-              <h3>Бизнес-центр "Плаза"</h3>
-              <p>
-                г. Невинномысск. Современный офисный центр класса А площадью 25
-                000 м².
+                На улице Пирогова в юго-западном районе города Ставрополя
               </p>
               <a href="#contact" class="btn">Подробнее</a>
             </div>
@@ -1144,15 +1135,29 @@
           <div class="project-card" data-category="public">
             <div class="project-img">
               <img
-                src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                alt="Школа №15"
+                src="./5b5e77f1f4d6a7a76d4979cc3d075f89.jpg"
+                alt="2017 год. ЖК «Лермонтоff»"
               />
             </div>
             <div class="project-overlay">
-              <h3>Школа №15</h3>
+              <h3>2017 год. ЖК «Лермонтоff»</h3>
               <p>
-                г. Кисловодск. Современное образовательное учреждение на 800
-                учащихся.
+                В центре города Ставрополя
+              </p>
+              <a href="#contact" class="btn">Подробнее</a>
+            </div>
+          </div>
+          <div class="project-card" data-category="residential">
+            <div class="project-img">
+              <img
+                src="./c8e8b337482d26dcd9032c586496944a.jpg"
+                alt="2013 год. Жилой дом"
+              />
+            </div>
+            <div class="project-overlay">
+              <h3>2013 год. Жилой дом </h3>
+              <p>
+                На улице Буйнакского в северо-западном районе города Ставрополя
               </p>
               <a href="#contact" class="btn">Подробнее</a>
             </div>
@@ -1165,26 +1170,26 @@
 			<div class="container">
 				<h2 class="section-title">Наша деятельность</h2>
 				<div class="gallery-grid">
-					<div class="gallery-item" onclick="openModal('https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
-						<img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Офис компании">
+					<div class="gallery-item" onclick="openModal('./e2c0eaa7cf943c32bac3aa38333283df.jpg')">
+						<img src="./e2c0eaa7cf943c32bac3aa38333283df.jpg" alt="Офис компании">
 						<div class="gallery-overlay">
 							<i class="fas fa-search-plus"></i>
 						</div>
 					</div>
-					<div class="gallery-item" onclick="openModal('https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
-						<img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Офис компании">
+					<div class="gallery-item" onclick="openModal('./obsh.jpg')">
+						<img src="./obsh.jpg" alt="Офис компании">
 						<div class="gallery-overlay">
 							<i class="fas fa-search-plus"></i>
 						</div>
 					</div>
-					<div class="gallery-item" onclick="openModal('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
-						<img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Офис компании">
+					<div class="gallery-item" onclick="openModal('./obsh2.jpg')">
+						<img src="./obsh2.jpg" alt="Офис компании">
 						<div class="gallery-overlay">
 							<i class="fas fa-search-plus"></i>
 						</div>
 					</div>
-					<div class="gallery-item" onclick="openModal('https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
-						<img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Офис компании">
+					<div class="gallery-item" onclick="openModal('./obsh3.jpg')">
+						<img src="./obsh3.jpg" alt="Офис компании">
 						<div class="gallery-overlay">
 							<i class="fas fa-search-plus"></i>
 						</div>
@@ -1337,19 +1342,18 @@
           <div class="footer-col">
             <h3>Услуги</h3>
             <ul class="footer-links">
-              <li><a href="#">Архитектурное проектирование</a></li>
-              <li><a href="#">Инженерные системы</a></li>
-              <li><a href="#">Дизайн интерьеров</a></li>
-              <li><a href="#">Строительный надзор</a></li>
+              <li>Архитектурное проектирование</li>
+              <li>Инженерные системы</li>
+              <li>Дизайн интерьеров</li>
+              <li>Строительный надзор</li>
             </ul>
           </div>
           <div class="footer-col">
             <h3>Проекты</h3>
             <ul class="footer-links">
-              <li><a href="#">Жилые комплексы</a></li>
-              <li><a href="#">Коттеджные поселки</a></li>
-              <li><a href="#">Коммерческие объекты</a></li>
-              <li><a href="#">Общественные здания</a></li>
+              <li>Жилые комплексы</li>
+              <li>Коттеджные поселки</li>
+              <li>Общественные здания</li>
             </ul>
           </div>
           <div class="footer-col">
